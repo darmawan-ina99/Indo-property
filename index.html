@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indo Property — Agent Properti Mewah Indonesia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+/* ============ FONDASI ============ */
+:root{
+  --paper:#F5F0E6;
+  --paper-2:#EDE6D6;
+  --ink:#181611;
+  --ink-2:#2A2721;
+  --brass:#A67F35;
+  --brass-deep:#84641F;
+  --green:#1E4B38;
+  --green-deep:#153827;
+  --line:rgba(24,22,17,.16);
+  --line-strong:rgba(24,22,17,.55);
+  --ivory:#F5F0E6;
+  --shadow:0 30px 60px -30px rgba(24,22,17,.35);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Manrope',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+body.no-scroll{overflow:hidden}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;background:none;border:none;color:inherit}
+input,select,textarea{font-family:inherit;font-size:inherit;color:inherit}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--brass);color:var(--ivory)}
+.serif{font-family:'Fraunces',serif}
+.container{max-width:1280px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.lucide{width:1.1em;height:1.1em;stroke-width:1.6}
+
+/* label kecil bergaya editorial */
+.eyebrow{
+  font-size:11px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;
+  display:flex;align-items:center;gap:12px;
+}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--brass)}
+
+/* ============ HEADER ============ */
+header{
+  position:fixed;inset:0 0 auto 0;z-index:200;
+  transition:background .4s var(--ease), box-shadow .4s var(--ease);
+}
+header.scrolled{background:rgba(245,240,230,.92);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.head-in{display:flex;align-items:center;justify-content:space-between;height:84px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand-mark{
+  width:44px;height:44px;border:1px solid var(--line-strong);display:grid;place-items:center;
+  font-family:'Fraunces',serif;font-size:17px;font-weight:500;letter-spacing:.02em;
+  transition:background .35s,color .35s;
+}
+.brand:hover .brand-mark{background:var(--ink);color:var(--ivory)}
+.brand-name{font-family:'Fraunces',serif;font-size:19px;font-weight:500;letter-spacing:.01em;line-height:1.1}
+.brand-name small{display:block;font-family:'Manrope',sans-serif;font-size:9px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--brass-deep)}
+nav{display:flex;gap:36px;align-items:center}
+nav a{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;position:relative;padding:4px 0}
+nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--brass);transition:width .35s var(--ease)}
+nav a:hover::after{width:100%}
+.head-wa{
+  display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line-strong);
+  padding:11px 20px;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  transition:background .35s,color .35s;
+}
+.head-wa:hover{background:var(--green);border-color:var(--green);color:var(--ivory)}
+@media(max-width:860px){nav .nav-link{display:none}}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--ivory)}
+.hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:heroZoom 14s var(--ease) forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top, rgba(14,13,9,.88) 0%, rgba(14,13,9,.35) 45%, rgba(14,13,9,.35) 100%);
+}
+.hero-in{position:relative;z-index:2;width:100%;padding-bottom:clamp(40px,6vh,72px)}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:700;
+  letter-spacing:.32em;text-transform:uppercase;color:#D8C69A;margin-bottom:26px;
+}
+.hero-tag::before{content:"";width:44px;height:1px;background:var(--brass)}
+.hero h1{
+  font-family:'Fraunces',serif;font-weight:300;
+  font-size:clamp(3rem,8.4vw,7.4rem);line-height:.98;letter-spacing:-.015em;
+  max-width:14ch;
+}
+.hero h1 em{font-style:italic;font-weight:400;color:#D8C69A}
+.hero-sub{max-width:46ch;margin-top:26px;font-size:15px;line-height:1.75;color:rgba(245,240,230,.82)}
+.hero-cta{display:flex;gap:16px;margin-top:38px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:11px;padding:16px 30px;
+  font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  transition:all .35s var(--ease);
+}
+.btn-solid{background:var(--ivory);color:var(--ink)}
+.btn-solid:hover{background:var(--brass);color:var(--ivory)}
+.btn-wa{border:1px solid rgba(245,240,230,.5);color:var(--ivory)}
+.btn-wa:hover{background:var(--green);border-color:var(--green)}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,56px);
+  margin-top:clamp(44px,7vh,80px);padding-top:30px;border-top:1px solid rgba(245,240,230,.28);
+}
+.stat-num{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3.4rem);font-weight:300;line-height:1}
+.stat-num sup{font-size:.45em;color:#D8C69A;font-style:italic}
+.stat-lab{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,240,230,.66);margin-top:10px}
+@media(max-width:640px){.hero-stats{grid-template-columns:1fr;gap:18px}}
+
+/* ============ MARQUEE ============ */
+.marquee{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);overflow:hidden;padding:18px 0;background:var(--paper)}
+.marquee-track{display:flex;width:max-content;animation:mq 30s linear infinite}
+.marquee span{
+  font-family:'Fraunces',serif;font-style:italic;font-weight:300;
+  font-size:clamp(1.4rem,2.6vw,2rem);white-space:nowrap;padding-right:56px;
+}
+.marquee b{font-style:normal;font-weight:500;color:var(--brass-deep)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ============ KOLEKSI ============ */
+.section{padding:clamp(80px,12vh,140px) 0}
+.coll-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:14px}
+.coll-head h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.4rem,5vw,4.4rem);line-height:1.02;letter-spacing:-.01em;margin-top:22px}
+.coll-head h2 em{font-style:italic;color:var(--brass-deep)}
+.coll-count{font-family:'Fraunces',serif;font-style:italic;font-size:15px;color:var(--ink-2);opacity:.7}
+.filterbar{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  border-top:1px solid var(--ink);border-bottom:1px solid var(--line);
+  padding:18px 0;margin:30px 0 56px;position:sticky;top:0;z-index:60;background:var(--paper);
+}
+.filter-tabs{display:flex;gap:clamp(14px,2.4vw,30px);flex-wrap:wrap}
+.ftab{
+  font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  padding:6px 0;position:relative;color:var(--ink-2);opacity:.72;transition:opacity .3s;
+}
+.ftab::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--brass);transition:width .35s var(--ease)}
+.ftab.active{opacity:1}
+.ftab.active::after{width:100%}
+.filter-right{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.searchbox{display:flex;align-items:center;gap:9px;border-bottom:1px solid var(--line-strong);padding:6px 2px}
+.searchbox input{border:none;background:none;outline:none;font-size:13px;width:170px}
+.searchbox input::placeholder{color:rgba(24,22,17,.45)}
+.seg{display:flex;border:1px solid var(--line-strong)}
+.seg button{padding:8px 16px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;transition:all .3s}
+.seg button.active{background:var(--ink);color:var(--ivory)}
+
+/* grid editorial: ritme 7/5 bergantian */
+.prop-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(24px,3.4vw,52px) clamp(20px,2.6vw,40px)}
+.prop{grid-column:span 6;cursor:pointer}
+.prop.w7{grid-column:span 7}
+.prop.w5{grid-column:span 5}
+.prop-media{position:relative;overflow:hidden;background:var(--paper-2)}
+.prop.w7 .prop-media{aspect-ratio:16/10}
+.prop.w5 .prop-media{aspect-ratio:4/3}
+.prop-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s var(--ease)}
+.prop:hover .prop-media img{transform:scale(1.055)}
+.prop-status{
+  position:absolute;top:16px;left:16px;display:inline-flex;align-items:center;gap:8px;
+  background:rgba(14,13,9,.72);color:var(--ivory);backdrop-filter:blur(6px);
+  font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;padding:8px 14px;
+}
+.prop-status i{width:6px;height:6px;border-radius:50%;background:var(--brass)}
+.prop-feat{
+  position:absolute;top:16px;right:16px;background:var(--brass);color:var(--ivory);
+  font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:8px 13px;
+}
+.prop-wabtn{
+  position:absolute;right:16px;bottom:16px;width:46px;height:46px;display:grid;place-items:center;
+  background:var(--green);color:var(--ivory);opacity:0;transform:translateY(10px);
+  transition:all .4s var(--ease);
+}
+.prop:hover .prop-wabtn{opacity:1;transform:translateY(0)}
+.prop-wabtn:hover{background:var(--green-deep)}
+.prop-info{padding-top:18px;border-top:1px solid var(--ink);margin-top:0}
+.prop-meta{display:flex;justify-content:space-between;align-items:baseline;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-deep)}
+.prop-index{font-family:'Fraunces',serif;font-style:italic;font-size:17px;color:var(--ink);letter-spacing:0;transition:color .3s}
+.prop:hover .prop-index{color:var(--brass)}
+.prop-info h3{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.5rem,2.4vw,2.1rem);line-height:1.12;margin:10px 0 8px}
+.prop-loc{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink-2)}
+.prop-specs{display:flex;gap:20px;margin-top:14px;font-size:12.5px;color:var(--ink-2);flex-wrap:wrap}
+.prop-specs span{display:inline-flex;align-items:center;gap:7px}
+.prop-price{
+  display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:14px;
+  border-top:1px solid var(--line);
+}
+.prop-price b{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.2rem,1.8vw,1.55rem)}
+.prop-price .arr{transition:transform .4s var(--ease);color:var(--brass-deep)}
+.prop:hover .arr{transform:translate(4px,-4px)}
+.empty{
+  grid-column:1/-1;text-align:center;padding:90px 20px;border:1px dashed var(--line-strong);
+}
+.empty h3{font-family:'Fraunces',serif;font-weight:300;font-size:1.8rem;margin:16px 0 8px}
+.empty p{color:var(--ink-2);font-size:14px;margin-bottom:24px}
+.link-btn{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:4px}
+.link-btn:hover{color:var(--brass-deep);border-color:var(--brass-deep)}
+@media(max-width:820px){.prop.w7,.prop.w5{grid-column:span 12}.prop .prop-media{aspect-ratio:4/3}}
+
+/* ============ TENTANG / KONTAK ============ */
+.about{background:var(--ink);color:var(--ivory)}
+.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(40px,6vw,90px);align-items:start}
+.about h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.2rem,4.4vw,3.8rem);line-height:1.08;margin:22px 0 26px}
+.about h2 em{font-style:italic;color:#D8C69A}
+.about p{font-size:15px;line-height:1.85;color:rgba(245,240,230,.78);max-width:54ch}
+.about-points{margin-top:38px;border-top:1px solid rgba(245,240,230,.2)}
+.about-points li{
+  list-style:none;display:flex;gap:18px;align-items:baseline;padding:16px 0;
+  border-bottom:1px solid rgba(245,240,230,.2);font-size:14px;
+}
+.about-points b{font-family:'Fraunces',serif;font-style:italic;font-weight:400;color:#D8C69A;font-size:17px;min-width:34px}
+.contact-card{border:1px solid rgba(245,240,230,.3);padding:clamp(28px,3.4vw,44px)}
+.contact-card .eyebrow{color:#D8C69A}
+.contact-card .eyebrow::before{background:#D8C69A}
+.wa-number{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2rem,3.4vw,3rem);margin:20px 0 6px;letter-spacing:.01em}
+.wa-note{font-size:13px;color:rgba(245,240,230,.66);line-height:1.7}
+.contact-card .btn{width:100%;justify-content:center;margin-top:26px}
+.contact-rows{margin-top:30px;border-top:1px solid rgba(245,240,230,.2)}
+.contact-rows div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(245,240,230,.2);font-size:13px}
+.contact-rows dt{color:rgba(245,240,230,.55);letter-spacing:.1em;text-transform:uppercase;font-size:10.5px;font-weight:700;padding-top:2px}
+.contact-rows dd{text-align:right}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr}}
+
+/* ============ FOOTER ============ */
+footer{border-top:1px solid var(--line);padding:34px 0}
+.foot-in{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:12.5px;color:var(--ink-2)}
+.admin-link{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;opacity:.65;transition:opacity .3s}
+.admin-link:hover{opacity:1;color:var(--brass-deep)}
+
+/* ============ REVEAL ============ */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ============ MODAL DASAR ============ */
+.overlay{
+  position:fixed;inset:0;z-index:400;background:rgba(14,13,9,.66);backdrop-filter:blur(6px);
+  display:grid;place-items:center;padding:20px;
+  opacity:0;pointer-events:none;transition:opacity .35s var(--ease);
+}
+.overlay.open{opacity:1;pointer-events:auto}
+.sheet{
+  background:var(--paper);width:100%;max-height:92vh;overflow-y:auto;
+  transform:translateY(26px) scale(.985);transition:transform .45s var(--ease);
+  box-shadow:var(--shadow);
+}
+.overlay.open .sheet{transform:none}
+.sheet::-webkit-scrollbar{width:5px}
+.sheet::-webkit-scrollbar-thumb{background:var(--line-strong)}
+
+/* ============ DETAIL PROPERTI ============ */
+.detail-sheet{max-width:1180px}
+.detail-close{
+  position:sticky;top:0;z-index:5;margin-left:auto;display:grid;place-items:center;
+  width:52px;height:52px;background:var(--ink);color:var(--ivory);float:right;
+}
+.detail-close:hover{background:var(--brass-deep)}
+.gal{position:relative;background:var(--paper-2)}
+.gal-main{aspect-ratio:16/9;overflow:hidden}
+.gal-main img{width:100%;height:100%;object-fit:cover}
+.gal-nav{
+  position:absolute;top:50%;transform:translateY(-50%);width:50px;height:50px;
+  display:grid;place-items:center;background:rgba(14,13,9,.6);color:var(--ivory);
+  backdrop-filter:blur(4px);transition:background .3s;
+}
+.gal-nav:hover{background:var(--brass-deep)}
+.gal-prev{left:0}.gal-next{right:0}
+.gal-count{
+  position:absolute;bottom:16px;right:16px;background:rgba(14,13,9,.68);color:var(--ivory);
+  font-size:11px;font-weight:700;letter-spacing:.18em;padding:8px 14px;
+}
+.gal-thumbs{display:flex;gap:8px;padding:10px;background:var(--ink);overflow-x:auto}
+.gal-thumbs button{flex:0 0 92px;aspect-ratio:4/3;overflow:hidden;opacity:.5;transition:opacity .3s;outline:1px solid transparent;outline-offset:-1px}
+.gal-thumbs button.active{opacity:1;outline-color:var(--brass)}
+.gal-thumbs img{width:100%;height:100%;object-fit:cover}
+.detail-body{display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(30px,4vw,60px);padding:clamp(28px,4vw,54px)}
+.detail-body h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(1.9rem,3.4vw,3rem);line-height:1.06;margin:12px 0 10px}
+.detail-specs{
+  display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--line);
+  margin:26px 0;
+}
+.dspec{padding:16px 6px;border-right:1px solid var(--line)}
+.dspec:last-child{border-right:none}
+.dspec b{display:block;font-family:'Fraunces',serif;font-weight:500;font-size:1.35rem}
+.dspec span{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-deep)}
+.detail-desc{font-size:14.5px;line-height:1.85;color:var(--ink-2)}
+.detail-aside{border-left:1px solid var(--line);padding-left:clamp(22px,2.6vw,40px)}
+.detail-price-lab{font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-deep)}
+.detail-price{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(1.7rem,2.6vw,2.3rem);margin:8px 0 4px}
+.detail-price small{font-family:'Manrope',sans-serif;font-size:13px;font-weight:600;color:var(--ink-2)}
+.wa-cta{
+  width:100%;display:flex;align-items:center;justify-content:center;gap:12px;
+  background:var(--green);color:var(--ivory);padding:17px;font-size:12px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;transition:background .3s;margin-top:22px;
+}
+.wa-cta:hover{background:var(--green-deep)}
+.wa-cta svg{width:20px;height:20px;fill:currentColor}
+.detail-agent{display:flex;gap:14px;align-items:center;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+.agent-ava{width:52px;height:52px;border:1px solid var(--line-strong);display:grid;place-items:center;font-family:'Fraunces',serif;font-size:19px}
+.detail-agent b{font-family:'Fraunces',serif;font-weight:500;font-size:16px;display:block}
+.detail-agent span{font-size:12px;color:var(--ink-2)}
+@media(max-width:860px){.detail-body{grid-template-columns:1fr}.detail-aside{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:26px}.detail-specs{grid-template-columns:repeat(2,1fr)}.dspec:nth-child(2){border-right:none}.gal-main{aspect-ratio:4/3}}
+
+/* ============ MODAL LOGIN ============ */
+.login-sheet{max-width:420px;background:var(--ink);color:var(--ivory);padding:clamp(34px,5vw,52px);text-align:center}
+.login-sheet .eyebrow{justify-content:center;color:#D8C69A}
+.login-sheet .eyebrow::before{background:#D8C69A}
+.login-sheet h3{font-family:'Fraunces',serif;font-weight:300;font-size:1.9rem;margin:18px 0 8px}
+.login-sheet p{font-size:13px;color:rgba(245,240,230,.6);margin-bottom:28px}
+.lock-ring{
+  width:64px;height:64px;margin:0 auto 8px;border:1px solid rgba(245,240,230,.35);border-radius:50%;
+  display:grid;place-items:center;color:#D8C69A;
+}
+.login-sheet.shake{animation:shake .45s}
+@keyframes shake{20%,60%{transform:translateX(-9px)}40%,80%{transform:translateX(9px)}}
+.pw-field{display:flex;border:1px solid rgba(245,240,230,.4);margin-bottom:14px}
+.pw-field input{
+  flex:1;background:none;border:none;outline:none;color:var(--ivory);padding:15px 18px;
+  font-size:18px;letter-spacing:.5em;text-align:center;
+}
+.pw-field input::placeholder{color:rgba(245,240,230,.3);letter-spacing:.14em;font-size:12px}
+.pw-err{font-size:12px;color:#E2A06A;min-height:18px;margin-bottom:8px}
+.login-btn{
+  width:100%;background:var(--ivory);color:var(--ink);padding:15px;
+  font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;transition:background .3s;
+}
+.login-btn:hover{background:var(--brass);color:var(--ivory)}
+.login-x{position:absolute;top:14px;right:14px;color:rgba(245,240,230,.6);padding:8px}
+.login-x:hover{color:var(--ivory)}
+.login-wrap{position:relative}
+
+/* ============ PANEL ADMIN ============ */
+.admin-panel{
+  position:fixed;inset:0;z-index:500;background:#14120C;color:var(--ivory);
+  overflow-y:auto;opacity:0;pointer-events:none;transition:opacity .4s var(--ease);
+}
+.admin-panel.open{opacity:1;pointer-events:auto}
+.admin-top{
+  position:sticky;top:0;z-index:20;background:rgba(20,18,12,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(245,240,230,.16);
+}
+.admin-top-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px;flex-wrap:wrap}
+.admin-top .brand-name small{color:#D8C69A}
+.admin-actions{display:flex;gap:12px;align-items:center}
+.admin-btn{
+  display:inline-flex;align-items:center;gap:9px;padding:12px 22px;
+  font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:all .3s;
+}
+.admin-btn.primary{background:var(--brass);color:var(--ivory)}
+.admin-btn.primary:hover{background:#C09A4E}
+.admin-btn.ghost{border:1px solid rgba(245,240,230,.35)}
+.admin-btn.ghost:hover{background:rgba(245,240,230,.1)}
+.admin-body{padding:clamp(30px,5vw,60px) 0}
+.admin-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.admin-head h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2rem,4vw,3.2rem)}
+.admin-head h2 em{font-style:italic;color:#D8C69A}
+.admin-head p{font-size:13px;color:rgba(245,240,230,.55);margin-top:6px}
+.arow{
+  display:grid;grid-template-columns:104px 1.4fr 1fr .8fr auto;gap:22px;align-items:center;
+  padding:18px 0;border-bottom:1px solid rgba(245,240,230,.16);transition:background .3s;
+}
+.arow:first-of-type{border-top:1px solid rgba(245,240,230,.35)}
+.arow:hover{background:rgba(245,240,230,.045)}
+.arow-thumb{width:104px;aspect-ratio:4/3;object-fit:cover}
+.arow-title{font-family:'Fraunces',serif;font-weight:400;font-size:1.25rem;line-height:1.15}
+.arow-sub{font-size:12px;color:rgba(245,240,230,.55);margin-top:5px;display:flex;align-items:center;gap:6px}
+.arow-price{font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem}
+.pill{
+  display:inline-flex;align-items:center;gap:7px;font-size:10px;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;border:1px solid rgba(245,240,230,.3);padding:6px 12px;
+}
+.pill i{width:6px;height:6px;border-radius:50%;background:var(--brass)}
+.pill.feat{border-color:var(--brass);color:#D8C69A}
+.arow-acts{display:flex;gap:8px}
+.icon-btn{
+  width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(245,240,230,.28);
+  transition:all .3s;color:rgba(245,240,230,.85);
+}
+.icon-btn:hover{background:var(--ivory);color:var(--ink)}
+.icon-btn.danger:hover{background:#8C3B2E;border-color:#8C3B2E;color:var(--ivory)}
+.icon-btn.on{background:var(--brass);border-color:var(--brass);color:var(--ivory)}
+.aempty{padding:70px 0;text-align:center;color:rgba(245,240,230,.5)}
+.aempty .serif{font-size:1.6rem;color:var(--ivory);display:block;margin-bottom:8px}
+@media(max-width:860px){
+  .arow{grid-template-columns:80px 1fr;grid-auto-rows:auto;row-gap:12px}
+  .arow-thumb{width:80px}
+  .arow-price{grid-column:2}
+  .arow-acts{grid-column:2}
+}
+
+/* ============ FORM PROPERTI ============ */
+.form-sheet{max-width:880px}
+.form-head{display:flex;justify-content:space-between;align-items:center;padding:26px clamp(24px,3.6vw,44px);border-bottom:1px solid var(--ink)}
+.form-head h3{font-family:'Fraunces',serif;font-weight:300;font-size:1.8rem}
+.form-head h3 em{font-style:italic;color:var(--brass-deep)}
+.form-body{padding:clamp(24px,3.6vw,44px)}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px 26px}
+.fspan{grid-column:1/-1}
+.ffield label{display:block;font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-deep);margin-bottom:8px}
+.ffield input,.ffield select,.ffield textarea{
+  width:100%;background:transparent;border:none;border-bottom:1px solid var(--line-strong);
+  padding:9px 2px;font-size:15px;outline:none;transition:border-color .3s;border-radius:0;
+}
+.ffield textarea{resize:vertical;min-height:88px;line-height:1.7;border:1px solid var(--line-strong);padding:12px}
+.ffield input:focus,.ffield select:focus,.ffield textarea:focus{border-color:var(--brass)}
+.fcheck{display:flex;align-items:center;gap:11px;font-size:13px;padding-top:24px;cursor:pointer}
+.fcheck input{width:17px;height:17px;accent-color:var(--brass)}
+.form-err{font-size:12.5px;color:#A03D2B;min-height:18px;margin:16px 0 0}
+.img-zone{border:1px dashed var(--line-strong);padding:22px;margin-top:8px}
+.img-zone-row{display:flex;gap:12px;flex-wrap:wrap}
+.img-zone-row input[type=text]{flex:1;min-width:200px;background:transparent;border:none;border-bottom:1px solid var(--line-strong);padding:9px 2px;outline:none;font-size:13.5px}
+.file-btn{
+  display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border:1px solid var(--ink);
+  font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:all .3s;
+}
+.file-btn:hover{background:var(--ink);color:var(--ivory)}
+.mini-btn{
+  display:inline-flex;align-items:center;gap:8px;padding:11px 18px;background:var(--ink);color:var(--ivory);
+  font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:background .3s;
+}
+.mini-btn:hover{background:var(--brass-deep)}
+.img-preview{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.img-chip{position:relative;width:110px;aspect-ratio:4/3;overflow:hidden;border:1px solid var(--line)}
+.img-chip img{width:100%;height:100%;object-fit:cover}
+.img-chip button{
+  position:absolute;top:5px;right:5px;width:24px;height:24px;display:grid;place-items:center;
+  background:rgba(14,13,9,.75);color:var(--ivory);border-radius:0;
+}
+.img-chip button:hover{background:#8C3B2E}
+.form-foot{display:flex;justify-content:flex-end;gap:14px;margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
+@media(max-width:640px){.fgrid{grid-template-columns:1fr}}
+
+/* ============ KONFIRMASI HAPUS ============ */
+.confirm-sheet{max-width:440px;padding:clamp(30px,4vw,44px);text-align:center}
+.confirm-sheet .lock-ring{border-color:var(--line-strong);color:#A03D2B}
+.confirm-sheet h3{font-family:'Fraunces',serif;font-weight:400;font-size:1.6rem;margin:16px 0 10px}
+.confirm-sheet p{font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-bottom:26px}
+.confirm-acts{display:flex;gap:12px}
+.confirm-acts button{flex:1;padding:14px;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:all .3s}
+.c-cancel{border:1px solid var(--line-strong)}
+.c-cancel:hover{background:var(--ink);color:var(--ivory)}
+.c-del{background:#8C3B2E;color:var(--ivory)}
+.c-del:hover{background:#6E2D22}
+
+/* ============ TOAST ============ */
+.toast-wrap{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);z-index:900;display:flex;flex-direction:column;gap:10px;align-items:center}
+.toast{
+  display:flex;align-items:center;gap:12px;background:var(--ink);color:var(--ivory);
+  padding:14px 22px;font-size:13px;box-shadow:var(--shadow);
+  animation:toastIn .45s var(--ease);max-width:90vw;
+}
+.toast.out{animation:toastOut .4s var(--ease) forwards}
+.toast i.ico{display:grid;place-items:center;color:var(--brass)}
+.toast.err i.ico{color:#E2A06A}
+@keyframes toastIn{from{opacity:0;transform:translateY(18px)}}
+@keyframes toastOut{to{opacity:0;transform:translateY(14px)}}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="siteHeader">
+  <div class="container head-in">
+    <a href="#" class="brand">
+      <div class="brand-mark">IP</div>
+      <div class="brand-name">Indo Property<small>Agent Properti</small></div>
+    </a>
+    <nav>
+      <a class="nav-link" href="#koleksi">Koleksi</a>
+      <a class="nav-link" href="#tentang">Tentang</a>
+      <a class="nav-link" href="#tentang">Kontak</a>
+      <a class="head-wa" href="#" data-action="wa-general">
+        <i data-lucide="message-circle"></i> 0813-1566-988
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://picsum.photos/seed/indoprop-hero/1920/1200.jpg" alt="Properti mewah Indonesia">
+  </div>
+  <div class="container hero-in">
+    <div class="hero-tag">Agent Properti · Indonesia</div>
+    <h1>Hunian <em>luar biasa</em> di seluruh Nusantara.</h1>
+    <p class="hero-sub">Dari vila tebing Uluwatu hingga penthouse di jantung SCBD — Indo Property mengkurasi properti pilihan dengan pelayanan personal, dari kunjungan pertama hingga serah terima kunci.</p>
+    <div class="hero-cta">
+      <a href="#koleksi" class="btn btn-solid">Jelajahi Koleksi <i data-lucide="arrow-down"></i></a>
+      <button class="btn btn-wa" data-action="wa-general"><i data-lucide="message-circle"></i> Konsultasi via WhatsApp</button>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num" data-count="250">0</div><div class="stat-lab">Properti Terjual</div></div>
+      <div><div class="stat-num" data-count="15">0</div><div class="stat-lab">Tahun Pengalaman</div></div>
+      <div><div class="stat-num" data-count="12">0</div><div class="stat-lab">Kota Terjangkau</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack"></div>
+</div>
+
+<!-- ================= KOLEKSI ================= -->
+<section class="section" id="koleksi">
+  <div class="container">
+    <div class="coll-head reveal">
+      <div>
+        <div class="eyebrow">Portofolio Pilihan</div>
+        <h2>Koleksi <em>properti</em> kami</h2>
+      </div>
+      <div class="coll-count" id="collCount"></div>
+    </div>
+
+    <div class="filterbar reveal">
+      <div class="filter-tabs" id="typeTabs"></div>
+      <div class="filter-right">
+        <label class="searchbox">
+          <i data-lucide="search"></i>
+          <input type="text" id="searchInput" placeholder="Cari properti, kota…">
+        </label>
+        <div class="seg" id="statusSeg"></div>
+      </div>
+    </div>
+
+    <div class="prop-grid" id="propGrid"></div>
+  </div>
+</section>
+
+<!-- ================= TENTANG / KONTAK ================= -->
+<section class="section about" id="tentang">
+  <div class="container about-grid">
+    <div class="reveal">
+      <div class="eyebrow" style="color:#D8C69A">Tentang Kami</div>
+      <h2>Partner terpercaya di setiap <em>transaksi</em>.</h2>
+      <p>Indo Property adalah agensi properti butik yang berfokus pada hunian premium di seluruh Indonesia. Kami percaya properti bukan sekadar aset — ia adalah cerita, warisan, dan tempat hidup yang bermakna.</p>
+      <ul class="about-points">
+        <li><b>01</b> Kurasi ketat — hanya properti yang kami verifikasi langsung masuk portofolio.</li>
+        <li><b>02</b> Pendampingan legal dan negosiasi dari awal hingga serah terima kunci.</li>
+        <li><b>03</b> Jaringan pembeli &amp; investor lokal maupun mancanegara.</li>
+      </ul>
+    </div>
+    <div class="contact-card reveal">
+      <div class="eyebrow">Info Lebih Lanjut</div>
+      <div class="wa-number serif">0813-1566-988</div>
+      <p class="wa-note">Konsultasi gratis, tanpa dipungut biaya. Tim kami siap membantu Anda menemukan properti yang tepat.</p>
+      <a class="btn btn-solid" style="background:var(--green);color:var(--ivory)" href="#" data-action="wa-general">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat via WhatsApp
+      </a>
+      <div class="contact-rows">
+        <div><dt>Jam Layanan</dt><dd>Senin – Sabtu, 08.00 – 20.00 WIB</dd></div>
+        <div><dt>Kantor</dt><dd>Jl. Jend. Sudirman Kav. 52, Jakarta Selatan</dd></div>
+        <div><dt>Email</dt><dd>halo@indoproperty.id</dd></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container foot-in">
+    <span>© 2025 Indo Property — Agent Properti Mewah Indonesia</span>
+    <button class="admin-link" data-action="open-login">
+      <i data-lucide="lock"></i> Masuk Admin
+    </button>
+  </div>
+</footer>
+
+<!-- ================= DETAIL PROPERTI ================= -->
+<div class="overlay" id="detailModal">
+  <div class="sheet detail-sheet" id="detailSheet"></div>
+</div>
+
+<!-- ================= LOGIN ADMIN ================= -->
+<div class="overlay" id="loginModal">
+  <div class="sheet login-sheet" id="loginSheet">
+    <button class="login-x" data-action="close-login"><i data-lucide="x"></i></button>
+    <div class="lock-ring"><i data-lucide="lock"></i></div>
+    <div class="eyebrow" style="margin-top:14px">Area Terbatas</div>
+    <h3>Panel Admin</h3>
+    <p>Masukkan password untuk mengelola listing properti.</p>
+    <div class="pw-field">
+      <input type="password" id="pwInput" inputmode="numeric" maxlength="4" placeholder="• • • •" autocomplete="off">
+    </div>
+    <div class="pw-err" id="pwErr"></div>
+    <button class="login-btn" data-action="try-login">Masuk</button>
+  </div>
+</div>
+
+<!-- ================= PANEL ADMIN ================= -->
+<div class="admin-panel" id="adminPanel">
+  <div class="admin-top">
+    <div class="container admin-top-in">
+      <div class="brand">
+        <div class="brand-mark" style="border-color:rgba(245,240,230,.4)">IP</div>
+        <div class="brand-name">Indo Property<small>Panel Admin</small></div>
+      </div>
+      <div class="admin-actions">
+        <button class="admin-btn primary" data-action="open-form"><i data-lucide="plus"></i> Properti Baru</button>
+        <button class="admin-btn ghost" data-action="logout-admin"><i data-lucide="log-out"></i> Keluar</button>
+      </div>
+    </div>
+  </div>
+  <div class="container admin-body">
+    <div class="admin-head">
+      <div>
+        <h2>Kelola <em>listing</em></h2>
+        <p id="adminCount"></p>
+      </div>
+    </div>
+    <div id="adminList"></div>
+  </div>
+</div>
+
+<!-- ================= FORM PROPERTI ================= -->
+<div class="overlay" id="formModal">
+  <div class="sheet form-sheet">
+    <div class="form-head">
+      <h3 id="formTitle">Properti <em>Baru</em></h3>
+      <button class="icon-btn" data-action="close-form" style="border-color:var(--line-strong)"><i data-lucide="x"></i></button>
+    </div>
+    <div class="form-body">
+      <div class="fgrid">
+        <div class="ffield fspan"><label>Judul Properti *</label><input type="text" id="fTitle" placeholder="cth: Villa Anjani Uluwatu"></div>
+        <div class="ffield"><label>Harga * (cth: Rp 8,5 Miliar / Rp 195 Juta / Tahun)</label><input type="text" id="fPrice" placeholder="Rp 0"></div>
+        <div class="ffield"><label>Lokasi *</label><input type="text" id="fLocation" placeholder="cth: Uluwatu, Bali"></div>
+        <div class="ffield"><label>Tipe</label>
+          <select id="fType"><option>Villa</option><option>Rumah</option><option>Apartemen</option><option>Tanah</option></select>
+        </div>
+        <div class="ffield"><label>Status</label>
+          <select id="fStatus"><option>Dijual</option><option>Disewa</option></select>
+        </div>
+        <div class="ffield"><label>Kamar Tidur</label><input type="number" id="fBeds" min="0" placeholder="0"></div>
+        <div class="ffield"><label>Kamar Mandi</label><input type="number" id="fBaths" min="0" placeholder="0"></div>
+        <div class="ffield"><label>Luas Bangunan (m²)</label><input type="number" id="fBuild" min="0" placeholder="0"></div>
+        <div class="ffield"><label>Luas Tanah (m²)</label><input type="number" id="fLand" min="0" placeholder="0"></div>
+        <div class="ffield fspan"><label>Deskripsi</label><textarea id="fDesc" placeholder="Ceritakan keunggulan properti ini…"></textarea></div>
+        <label class="fcheck fspan"><input type="checkbox" id="fFeatured"> Tandai sebagai properti unggulan</label>
+        <div class="ffield fspan">
+          <label>Gambar Properti * (minimal 1)</label>
+          <div class="img-zone">
+            <div class="img-zone-row">
+              <label class="file-btn" style="cursor:pointer">
+                <i data-lucide="image-plus"></i> Unggah dari perangkat
+                <input type="file" id="imgInput" accept="image/*" multiple hidden>
+              </label>
+              <input type="text" id="imgUrl" placeholder="…atau tempel URL gambar di sini">
+              <button class="mini-btn" data-action="add-url-image"><i data-lucide="link"></i> Tambah</button>
+            </div>
+            <div class="img-preview" id="imgPreview"></div>
+          </div>
+        </div>
+      </div>
+      <div class="form-err" id="formErr"></div>
+      <div class="form-foot">
+        <button class="admin-btn ghost" style="border-color:var(--line-strong);color:var(--ink)" data-action="close-form">Batal</button>
+        <button class="admin-btn primary" style="background:var(--ink)" data-action="save-prop"><i data-lucide="check"></i> Simpan Properti</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= KONFIRMASI HAPUS ================= -->
+<div class="overlay" id="confirmModal">
+  <div class="sheet confirm-sheet">
+    <div class="lock-ring"><i data-lucide="trash-2"></i></div>
+    <h3>Hapus properti ini?</h3>
+    <p id="confirmText">Tindakan ini tidak dapat dibatalkan.</p>
+    <div class="confirm-acts">
+      <button class="c-cancel" data-action="cancel-del">Batal</button>
+      <button class="c-del" data-action="confirm-del">Ya, Hapus</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast-wrap" id="toastWrap"></div>
+
+<script>
+/* ================================================================
+   INDO PROPERTY — semua logika berjalan lokal di browser.
+   "Backend" disimulasikan dengan localStorage sebagai database.
+================================================================ */
+const LS_KEY = 'indoProperty.v1';
+const ADMIN_PASSWORD = '0021';
+const WA_NUMBER = '628131566988';
+
+/* ---------- util ---------- */
+const $  = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const waLink = t => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(t)}`;
+function refreshIcons(){ if (window.lucide) lucide.createIcons(); }
+
+function toast(msg, type='ok'){
+  const el = document.createElement('div');
+  el.className = 'toast' + (type==='err' ? ' err' : '');
+  el.innerHTML = `<span class="ico"><i data-lucide="${type==='err'?'alert-circle':'check-circle-2'}"></i></span><span>${esc(msg)}</span>`;
+  $('#toastWrap').appendChild(el);
+  refreshIcons();
+  setTimeout(()=>{ el.classList.add('out'); setTimeout(()=>el.remove(), 420); }, 3200);
+}
+
+/* ---------- data awal (seed) ---------- */
+function seedData(){
+  const P = (o) => Object.assign({
+    beds:0, baths:0, build:0, land:0, desc:'', featured:false, status:'Dijual', type:'Rumah'
+  }, o);
+  const img = (seed, n=3) => Array.from({length:n}, (_,i)=>`https://picsum.photos/seed/${seed}-${i+1}/1400/900.jpg`);
+  return [
+    P({ id:'s1', title:'Villa Anjani', location:'Uluwatu, Bali', price:'Rp 8,5 Miliar', type:'Villa', status:'Dijual',
+        beds:5, baths:6, build:640, land:1200, featured:true,
+        desc:'Vila tebing dengan panorama Samudra Hindia 180°. Dibangun dengan batu alam lokal, infinity pool 25 meter, dan interior kayu jati tua. Lima menit dari Pantai Bingin.',
+        images: img('indoprop-villa1', 4) }),
+    P({ id:'s2', title:'Penthouse Sapphire', location:'SCBD, Jakarta Selatan', price:'Rp 12,8 Miliar', type:'Apartemen', status:'Dijual',
+        beds:4, baths:5, build:480, land:0, featured:true,
+        desc:'Penthouse dua lantai di lantai 51 dengan pemandangan skyline Jakarta. Dilengkapi lift privat, ruang wow-factor double-height, dan akses langsung ke kawasan SCBD.',
+        images: img('indoprop-pent2', 4) }),
+    P({ id:'s3', title:'Villa Uma Canggu', location:'Canggu, Bali', price:'Rp 195 Juta / Tahun', type:'Villa', status:'Disewa',
+        beds:4, baths:4, build:450, land:600,
+        desc:'Vila sewa tahunan bergaya tropis kontemporer, sepuluh menit dari Berawa Beach. Cocok untuk keluarga ekspatriat — dilengkapi kolam privat dan taman tropis.',
+        images: img('indoprop-villa3') }),
+    P({ id:'s4', title:'Rumah Tropis Kemang', location:'Kemang, Jakarta Selatan', price:'Rp 4,6 Miliar', type:'Rumah', status:'Dijual',
+        beds:5, baths:4, build:380, land:450,
+        desc:'Rumah dua lantai dengan sirkulasi udara silang, courtyard terbuka, dan material kayu ulin. Lingkungan hijau dan tenang di jantung Kemang.',
+        images: img('indoprop-house4') }),
+    P({ id:'s5', title:'The Park Residence', location:'Kebayoran Baru, Jakarta', price:'Rp 85 Juta / Bulan', type:'Apartemen', status:'Disewa',
+        beds:3, baths:3, build:220, land:0,
+        desc:'Unit furnished penuh menghadap taman kota. Fasilitas lima bintang: kolam olimpik, gym, dan concierge 24 jam. Termasuk dua slot parkir.',
+        images: img('indoprop-apt5') }),
+    P({ id:'s6', title:'Kavling Bukit Jimbaran', location:'Jimbaran, Bali', price:'Rp 1,9 Miliar', type:'Tanah', status:'Dijual',
+        beds:0, baths:0, build:0, land:800,
+        desc:'Tanah kontur berbukit dengan sertifikat Hak Guna Bangunan bersih, cocok untuk vila hunian atau retret. View laut dan bandara dapat dibangun.',
+        images: img('indoprop-land6') }),
+    P({ id:'s7', title:'Ubud Riverside Villa', location:'Ubud, Bali', price:'Rp 320 Juta / Tahun', type:'Villa', status:'Disewa',
+        beds:6, baths:6, build:900, land:1500, featured:true,
+        desc:'Estate tepi sungai dengan delapan paviliun terpisah, shala yoga menghadap sawah, dan staf penuh. Perpaduan arsitektur Jawa dan Bali yang otentik.',
+        images: img('indoprop-villa7', 4) }),
+    P({ id:'s8', title:'Townhouse Greenwich Park', location:'BSD City, Tangerang', price:'Rp 2,7 Miliar', type:'Rumah', status:'Dijual',
+        beds:4, baths:3, build:240, land:180,
+        desc:'Townhouse modern dalam kawasan berkonsep taman. One-gate system, club house, dan dekat dengan sekolah internasional. Siap huni.',
+        images: img('indoprop-town8') }),
+  ];
+}
+
+/* ---------- "database" localStorage ---------- */
+let properties;
+try {
+  const raw = localStorage.getItem(LS_KEY);
+  properties = raw ? JSON.parse(raw) : null;
+  if (!Array.isArray(properties)) properties = null;
+} catch(e){ properties = null; }
+if (!properties) { properties = seedData(); persist(); }
+
+function persist(){
+  try { localStorage.setItem(LS_KEY, JSON.stringify(properties)); }
+  catch(e){ toast('Penyimpanan browser penuh. Gunakan gambar via URL.', 'err'); }
+}
+
+/* ---------- filter & render katalog ---------- */
+const filters = { q:'', type:'Semua', status:'Semua' };
+const TYPES = ['Semua','Villa','Rumah','Apartemen','Tanah'];
+const STATUSES = ['Semua','Dijual','Disewa'];
+
+function renderFilters(){
+  $('#typeTabs').innerHTML = TYPES.map(t =>
+    `<button class="ftab ${filters.type===t?'active':''}" data-action="set-type" data-type="${t}">${t}</button>`).join('');
+  $('#statusSeg').innerHTML = STATUSES.map(s =>
+    `<button class="${filters.status===s?'active':''}" data-action="set-status" data-status="${s}">${s==='Semua'?'Semua Status':s}</button>`).join('');
+}
+
+function filtered(){
+  const q = filters.q.toLowerCase();
+  return properties.filter(p =>
+    (filters.type==='Semua' || p.type===filters.type) &&
+    (filters.status==='Semua' || p.status===filters.status) &&
+    (!q || (p.title+' '+p.location).toLowerCase().includes(q))
+  );
+}
+
+function specHTML(p){
+  const n = v => v>0 ? v : '—';
+  return `
+    <span><i data-lucide="bed-double"></i> ${n(p.beds)} Kamar</span>
+    <span><i data-lucide="bath"></i> ${n(p.baths)} Mandi</span>
+    ${p.build>0 ? `<span><i data-lucide="ruler"></i> ${p.build} m² Bangunan</span>` : ''}
+    ${p.land>0  ? `<span><i data-lucide="map"></i> ${p.land} m² Tanah</span>` : ''}`;
+}
+
+function renderCatalog(){
+  const list = filtered();
+  const grid = $('#propGrid');
+  $('#collCount').textContent = list.length
+    ? `${list.length} properti — dikurasi khusus untuk Anda` : '';
+
+  if (!list.length){
+    grid.innerHTML = `
+      <div class="empty reveal in">
+        <i data-lucide="search-x" style="width:38px;height:38px;color:var(--brass-deep)"></i>
+        <h3 class="serif">Tidak ada yang cocok</h3>
+        <p>Coba ubah kata kunci atau filter Anda.</p>
+        <button class="link-btn" data-action="reset-filters">Reset Semua Filter</button>
+      </div>`;
+  } else {
+    // pola ritme editorial: lebar bergantian 7 / 5 kolom
+    const spans = ['w7','w5','w5','w7'];
+    grid.innerHTML = list.map((p,i) => {
+      const img = p.images[0] || '';
+      const wa = waLink(`Halo Indo Property, saya tertarik dengan properti "${p.title}" di ${p.location}. Boleh minta info lebih lanjut?`);
+      return `
+      <article class="prop ${spans[i%4]} reveal" data-action="open-detail" data-id="${p.id}">
+        <div class="prop-media">
+          <img src="${esc(img)}" alt="${esc(p.title)}" loading="lazy">
+          <div class="prop-status"><i></i>${esc(p.status)}</div>
+          ${p.featured ? '<div class="prop-feat">Unggulan</div>' : ''}
+          <button class="prop-wabtn" data-action="wa-prop" data-id="${p.id}" title="Tanya via WhatsApp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </button>
+        </div>
+        <div class="prop-info">
+          <div class="prop-meta">
+            <span>${esc(p.type)} — ${esc(p.location)}</span>
+            <span class="prop-index">${String(i+1).padStart(2,'0')}</span>
+          </div>
+          <h3>${esc(p.title)}</h3>
+          <div class="prop-specs">${specHTML(p)}</div>
+          <div class="prop-price">
+            <b>${esc(p.price)}</b>
+            <span class="arr"><i data-lucide="arrow-up-right"></i></span>
+          </div>
+        </div>
+      </article>`;
+    }).join('');
+  }
+  refreshIcons();
+  observeReveals();
+}
+
+/* ---------- modal detail ---------- */
+let currentDetail = null, currentImg = 0;
+
+function openDetail(id){
+  const p = properties.find(x => x.id === id);
+  if (!p) return;
+  currentDetail = p; currentImg = 0;
+  const wa = waLink(`Halo Indo Property, saya tertarik dengan properti "${p.title}" di ${p.location}. Boleh minta info lebih lanjut?`);
+  $('#detailSheet').innerHTML = `
+    <button class="detail-close" data-action="close-detail"><i data-lucide="x"></i></button>
+    <div class="gal">
+      <div class="gal-main"><img id="galMain" src="${esc(p.images[0]||'')}" alt="${esc(p.title)}"></div>
+      ${p.images.length>1 ? `
+        <button class="gal-nav gal-prev" data-action="prev-img"><i data-lucide="chevron-left"></i></button>
+        <button class="gal-nav gal-next" data-action="next-img"><i data-lucide="chevron-right"></i></button>
+        <div class="gal-count" id="galCount">1 / ${p.images.length}</div>` : ''}
+      ${p.images.length>1 ? `
+      <div class="gal-thumbs" id="galThumbs">
+        ${p.images.map((s,i)=>`<button class="${i===0?'active':''}" data-action="set-img" data-index="${i}"><img src="${esc(s)}" alt=""></button>`).join('')}
+      </div>` : ''}
+    </div>
+    <div class="detail-body">
+      <div>
+        <div class="eyebrow">${esc(p.type)} · ${esc(p.status)}</div>
+        <h2>${esc(p.title)}</h2>
+        <div class="prop-loc"><i data-lucide="map-pin"></i> ${esc(p.location)}</div>
+        <div class="detail-specs">
+          <div class="dspec"><b>${p.beds>0?p.beds:'—'}</b><span>Kamar Tidur</span></div>
+          <div class="dspec"><b>${p.baths>0?p.baths:'—'}</b><span>Kamar Mandi</span></div>
+          <div class="dspec"><b>${p.build>0?p.build+' m²':'—'}</b><span>Bangunan</span></div>
+          <div class="dspec"><b>${p.land>0?p.land+' m²':'—'}</b><span>Tanah</span></div>
+        </div>
+        <p class="detail-desc">${esc(p.desc) || 'Deskripsi properti akan segera ditambahkan. Silakan hubungi kami untuk informasi lengkap.'}</p>
+      </div>
+      <aside class="detail-aside">
+        <div class="detail-price-lab">Harga ${esc(p.status)}</div>
+        <div class="detail-price">${esc(p.price)}</div>
+        <a class="wa-cta" href="${wa}" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Tanya Properti Ini
+        </a>
+        <div class="detail-agent">
+          <div class="agent-ava">IP</div>
+          <div><b>Indo Property</b><span>Agent resmi · 0813-1566-988</span></div>
+        </div>
+      </aside>
+    </div>`;
+  $('#detailModal').classList.add('open');
+  document.body.classList.add('no-scroll');
+  refreshIcons();
+}
+function closeDetail(){ $('#detailModal').classList.remove('open'); document.body.classList.remove('no-scroll'); }
+function setImg(i){
+  const p = currentDetail; if (!p || !p.images.length) return;
+  currentImg = (i + p.images.length) % p.images.length;
+  $('#galMain').src = p.images[currentImg];
+  $('#galCount').textContent = `${currentImg+1} / ${p.images.length}`;
+  $$('#galThumbs button').forEach((b,j)=>b.classList.toggle('active', j===currentImg));
+}
+
+/* ---------- panel admin: login ---------- */
+let isAdmin = false;
+function openLogin(){
+  $('#pwInput').value=''; $('#pwErr').textContent='';
+  $('#loginModal').classList.add('open');
+  document.body.classList.add('no-scroll');
+  setTimeout(()=>$('#pwInput').focus(), 350);
+}
+function tryLogin(){
+  const v = $('#pwInput').value.trim();
+  if (v === ADMIN_PASSWORD){
+    isAdmin = true;
+    $('#loginModal').classList.remove('open');
+    openAdmin();
+    toast('Selamat datang, Admin.');
+  } else {
+    $('#pwErr').textContent = 'Password salah — coba lagi.';
+    const sh = $('#loginSheet');
+    sh.classList.remove('shake'); void sh.offsetWidth; sh.classList.add('shake');
+  }
+}
+function openAdmin(){
+  $('#adminPanel').classList.add('open');
+  document.body.classList.add('no-scroll');
+  renderAdmin();
+}
+function closeAdmin(){
+  $('#adminPanel').classList.remove('open');
+  document.body.classList.remove('no-scroll');
+}
+
+/* ---------- panel admin: daftar ---------- */
+function renderAdmin(){
+  $('#adminCount').textContent = `${properties.length} properti terdaftar di portofolio`;
+  const list = $('#adminList');
+  if (!properties.length){
+    list.innerHTML = `<div class="aempty"><span class="serif">Belum ada properti.</span>Klik "Properti Baru" untuk menambahkan listing pertama Anda.</div>`;
+    refreshIcons(); return;
+  }
+  list.innerHTML = properties.map(p => `
+    <div class="arow">
+      <img class="arow-thumb" src="${esc(p.images[0]||'')}" alt="">
+      <div>
+        <div class="arow-title">${esc(p.title)}</div>
+        <div class="arow-sub"><i data-lucide="map-pin"></i> ${esc(p.location)} · ${esc(p.type)}</div>
+      </div>
+      <div class="arow-price">${esc(p.price)}</div>
+      <div>
+        <span class="pill"><i></i>${esc(p.status)}</span>
+        ${p.featured ? '<span class="pill feat" style="margin-left:8px">Unggulan</span>' : ''}
+      </div>
+      <div class="arow-acts">
+        <button class="icon-btn ${p.featured?'on':''}" data-action="feat-prop" data-id="${p.id}" title="Tandai unggulan"><i data-lucide="star"></i></button>
+        <button class="icon-btn" data-action="edit-prop" data-id="${p.id}" title="Edit"><i data-lucide="pencil"></i></button>
+        <button class="icon-btn danger" data-action="del-prop" data-id="${p.id}" title="Hapus"><i data-lucide="trash-2"></i></button>
+      </div>
+    </div>`).join('');
+  refreshIcons();
+}
+
+/* ---------- form tambah / edit ---------- */
+let draftImages = [], editingId = null, deleteTargetId = null;
+
+function openForm(id=null){
+  editingId = id;
+  const p = id ? properties.find(x=>x.id===id) : null;
+  $('#formTitle').innerHTML = p ? 'Edit <em>Properti</em>' : 'Properti <em>Baru</em>';
+  $('#fTitle').value = p?.title || '';
+  $('#fPrice').value = p?.price || '';
+  $('#fLocation').value = p?.location || '';
+  $('#fType').value = p?.type || 'Villa';
+  $('#fStatus').value = p?.status || 'Dijual';
+  $('#fBeds').value = p?.beds || '';
+  $('#fBaths').value = p?.baths || '';
+  $('#fBuild').value = p?.build || '';
+  $('#fLand').value = p?.land || '';
+  $('#fDesc').value = p?.desc || '';
+  $('#fFeatured').checked = !!p?.featured;
+  $('#imgUrl').value = '';
+  $('#formErr').textContent = '';
+  draftImages = p ? [...p.images] : [];
+  renderDraft();
+  $('#formModal').classList.add('open');
+  refreshIcons();
+}
+function closeForm(){ $('#formModal').classList.remove('open'); }
+
+function renderDraft(){
+  $('#imgPreview').innerHTML = draftImages.map((s,i)=>`
+    <div class="img-chip">
+      <img src="${esc(s)}" alt="">
+      <button data-action="remove-draft-img" data-index="${i}" title="Hapus gambar"><i data-lucide="x"></i></button>
+    </div>`).join('');
+  refreshIcons();
+}
+
+/* unggah file → di-resize via canvas agar hemat kuota localStorage */
+function resizeImage(file, maxW=1400, q=0.82){
+  return new Promise((res, rej)=>{
+    const reader = new FileReader();
+    reader.onload = e => {
+      const img = new Image();
+      img.onload = () => {
+        const sc = Math.min(1, maxW / img.width);
+        const c = document.createElement('canvas');
+        c.width = Math.round(img.width * sc);
+        c.height = Math.round(img.height * sc);
+        c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+        res(c.toDataURL('image/jpeg', q));
+      };
+      img.onerror = rej;
+      img.src = e.target.result;
+    };
+    reader.onerror = rej;
+    reader.readAsDataURL(file);
+  });
+}
+ $('#imgInput').addEventListener('change', async e => {
+  const files = [...e.target.files].filter(f => f.type.startsWith('image/'));
+  for (const f of files){
+    try { draftImages.push(await resizeImage(f)); }
+    catch(_){ toast('Gagal membaca gambar.', 'err'); }
+  }
+  e.target.value = '';
+  renderDraft();
+  if (files.length) toast(`${files.length} gambar ditambahkan.`);
+});
+
+function saveProp(){
+  const title = $('#fTitle').value.trim();
+  const price = $('#fPrice').value.trim();
+  const location = $('#fLocation').value.trim();
+  if (!title || !price || !location){
+    $('#formErr').textContent = 'Judul, harga, dan lokasi wajib diisi.';
+    return;
+  }
+  if (!draftImages.length){
+    $('#formErr').textContent = 'Tambahkan minimal satu gambar properti.';
+    return;
+  }
+  $('#formErr').textContent = '';
+  const data = {
+    title, price, location,
+    type: $('#fType').value,
+    status: $('#fStatus').value,
+    beds: +$('#fBeds').value || 0,
+    baths: +$('#fBaths').value || 0,
+    build: +$('#fBuild').value || 0,
+    land: +$('#fLand').value || 0,
+    desc: $('#fDesc').value.trim(),
+    featured: $('#fFeatured').checked,
+    images: [...draftImages],
+  };
+  if (editingId){
+    const i = properties.findIndex(x=>x.id===editingId);
+    properties[i] = { ...properties[i], ...data };
+    toast('Perubahan properti disimpan.');
+  } else {
+    properties.unshift({ id: 'p' + Date.now(), ...data });
+    toast('Properti baru berhasil dipublikasikan.');
+  }
+  persist();
+  closeForm();
+  renderCatalog();
+  renderAdmin();
+}
+
+/* ---------- konfirmasi hapus ---------- */
+function askDelete(id){
+  const p = properties.find(x=>x.id===id);
+  deleteTargetId = id;
+  $('#confirmText').innerHTML = `"${esc(p.title)}" akan dihapus permanen dari portofolio. Tindakan ini tidak dapat dibatalkan.`;
+  $('#confirmModal').classList.add('open');
+}
+
+/* ---------- reveal on scroll ---------- */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(en => { if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+}, { threshold: 0.12 });
+function observeReveals(){ $$('.reveal:not(.in)').forEach(el => io.observe(el)); }
+
+/* ---------- count-up statistik ---------- */
+const statIO = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (!en.isIntersecting) return;
+    const el = en.target, target = +el.dataset.count, t0 = performance.now();
+    const tick = t => {
+      const k = Math.min(1, (t - t0) / 1600);
+      el.innerHTML = Math.round(target * (1 - Math.pow(1-k, 3))) + '<sup>+</sup>';
+      if (k < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+    statIO.unobserve(el);
+  });
+}, { threshold: 0.5 });
+ $$('.stat-num').forEach(el => statIO.observe(el));
+
+/* ---------- marquee ---------- */
+(function(){
+  const items = ['Villa Private Pool','Penthouse CBD','Rumah Tropis','Tanah View Laut','Apartemen Furnished','Disewakan Tahunan','Dijual Siap Huni'];
+  const half = items.map(t => `<span><b>—</b>&nbsp;&nbsp;${t}</span>`).join('');
+  $('#marqueeTrack').innerHTML = half + half;
+})();
+
+/* ---------- header scroll ---------- */
+window.addEventListener('scroll', () => {
+  $('#siteHeader').classList.toggle('scrolled', window.scrollY > 40);
+}, { passive:true });
+
+/* ---------- pencarian ---------- */
+ $('#searchInput').addEventListener('input', e => { filters.q = e.target.value; renderCatalog(); });
+
+/* ---------- event delegation global ---------- */
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-action]');
+  if (!t) return;
+  const id = t.dataset.id;
+  switch (t.dataset.action){
+    case 'wa-general':   e.preventDefault(); window.open(waLink('Halo Indo Property, saya ingin mendapatkan info lebih lanjut tentang properti Anda.'), '_blank'); break;
+    case 'wa-prop':      e.stopPropagation(); { const p = properties.find(x=>x.id===id); window.open(waLink(`Halo Indo Property, saya tertarik dengan properti "${p.title}" di ${p.location}. Boleh minta info lebih lanjut?`), '_blank'); } break;
+    case 'open-detail':  openDetail(id); break;
+    case 'close-detail': closeDetail(); break;
+    case 'prev-img':     setImg(currentImg-1); break;
+    case 'next-img':     setImg(currentImg+1); break;
+    case 'set-img':      setImg(+t.dataset.index); break;
+    case 'set-type':     filters.type = t.dataset.type; renderFilters(); renderCatalog(); break;
+    case 'set-status':   filters.status = t.dataset.status; renderFilters(); renderCatalog(); break;
+    case 'reset-filters':filters.q=''; filters.type='Semua'; filters.status='Semua'; $('#searchInput').value=''; renderFilters(); renderCatalog(); break;
+    case 'open-login':   openLogin(); break;
+    case 'close-login':  $('#loginModal').classList.remove('open'); if(!$('#adminPanel').classList.contains('open')) document.body.classList.remove('no-scroll'); break;
+    case 'try-login':    tryLogin(); break;
+    case 'logout-admin': isAdmin=false; closeAdmin(); toast('Anda telah keluar dari panel admin.'); break;
+    case 'open-form':    openForm(); break;
+    case 'close-form':   closeForm(); break;
+    case 'add-url-image':{
+      const u = $('#imgUrl').value.trim();
+      if (u){ draftImages.push(u); $('#imgUrl').value=''; renderDraft(); }
+      break;
+    }
+    case 'remove-draft-img': draftImages.splice(+t.dataset.index,1); renderDraft(); break;
+    case 'save-prop':    saveProp(); break;
+    case 'edit-prop':    openForm(id); break;
+    case 'del-prop':     askDelete(id); break;
+    case 'confirm-del': {
+      const p = properties.find(x=>x.id===deleteTargetId);
+      properties = properties.filter(x=>x.id!==deleteTargetId);
+      persist(); renderCatalog(); renderAdmin();
+      $('#confirmModal').classList.remove('open');
+      toast(`"${p.title}" telah dihapus.`);
+      break;
+    }
+    case 'cancel-del':   $('#confirmModal').classList.remove('open'); break;
+    case 'feat-prop': {
+      const p = properties.find(x=>x.id===id);
+      p.featured = !p.featured;
+      persist(); renderAdmin(); renderCatalog();
+      toast(p.featured ? `"${p.title}" ditandai unggulan.` : `Tanda unggulan "${p.title}" dilepas.`);
+      break;
+    }
+  }
+});
+
+/* Enter pada kolom password */
+ $('#pwInput').addEventListener('keydown', e => { if (e.key==='Enter') tryLogin(); });
+/* klik latar modal untuk menutup */
+ $$('.overlay').forEach(ov => ov.addEventListener('click', e => {
+  if (e.target === ov && ov.id !== 'loginModal'){
+    ov.classList.remove('open');
+    if (!$('#adminPanel').classList.contains('open')) document.body.classList.remove('no-scroll');
+  }
+}));
+/* Escape menutup modal teratas */
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Escape') return;
+  if ($('#formModal').classList.contains('open')) return closeForm();
+  if ($('#confirmModal').classList.contains('open')) return $('#confirmModal').classList.remove('open');
+  if ($('#detailModal').classList.contains('open')) return closeDetail();
+  if ($('#loginModal').classList.contains('open')) return;
+});
+
+/* ---------- render awal ---------- */
+renderFilters();
+renderCatalog();
+refreshIcons();
+observeReveals();
+</script>
+</body>
+  </html>
